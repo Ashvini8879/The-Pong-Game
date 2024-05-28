@@ -10,7 +10,8 @@
 8. keep score
 
 
-1. Create the screen(main.py)
+
+Create the screen(main.py)
    
             from turtle import Screen 
             screen = Screen()
@@ -19,7 +20,7 @@
             screen.bgcolor("black")
             screen.exitonclick()
    
-2. Create and move a paddle(paddle.py)
+Create and move a paddle(paddle.py)
    
             from turtle import Turtle
             class Paddle(Turtle):
@@ -40,7 +41,7 @@
                     new_y = self.ycor() - 20
                     self.goto(self.xcor(),new_y)
 
-3. Create another paddle(main.py)
+Create another paddle(main.py)
   
             screen.tracer(0)  # to turn off the animation but if you turn off then nothing will display therefore we have to call update method.
       
@@ -62,7 +63,7 @@
                 screen.update()
                 ball.move()
 
-4. Create the ball and make it move(ball.py)
+Create the ball and make it move(ball.py)
     
                   from turtle import Turtle
                   class Ball(Turtle):
@@ -81,7 +82,7 @@
                           new_y = self.ycor()  +self.y_move 
                           self.goto(new_x,new_y)
 
- 5. Detect collision with wall and bounce
+Detect collision with wall and bounce
        
               (ball.py) def bounce_y(self):
                           self.y_move *= -1 #Upward and Downward bounce
@@ -91,7 +92,7 @@
                                   #ball needs to bounce
                                   ball.bounce_y()
 
-6. Detect collision with paddle
+Detect collision with paddle
    
         (ball.py)     def bounce_x(self):
                           self.x_move *= -1 #left and right bounce
@@ -100,7 +101,7 @@
                           if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320 :
                                ball.bounce_x()
 
-7. Detect when paddle misses
+Detect when paddle misses
    
                (ball.py) def reset_position(self):
                                 self.goto(0,0)
@@ -115,7 +116,7 @@
                     ball.reset_position()
                     scoreboard.r_point()  # To increase score of right side player
 
-9. keep score(scoreboard.py)
+keep score(scoreboard.py)
 
             from turtle import Turtle
             
@@ -146,7 +147,11 @@
                     self.r_score +=1
                     self.update_scoreboard()
 
+OUTPUTS:
 
+![image](https://github.com/Ashvini8879/The-Pong-Game/assets/170402064/c84aac82-39bc-43b4-a6dd-b793c254d8d7)
+
+![image](https://github.com/Ashvini8879/The-Pong-Game/assets/170402064/9c6b66d4-86ea-40c9-ab05-77b844a76f31)
 
 
 
