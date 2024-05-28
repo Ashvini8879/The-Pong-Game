@@ -94,8 +94,6 @@ Detect collision with wall and bounce
 
 Detect collision with paddle
 
-![WhatsApp Image 2024-05-28 at 8 15 07 PM](https://github.com/Ashvini8879/The-Pong-Game/assets/170402064/a774ccf9-b34d-4321-804a-375b671bccd5)
-
    
         (ball.py)     def bounce_x(self):
                           self.x_move *= -1 #left and right bounce
